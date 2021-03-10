@@ -1,5 +1,5 @@
 const { Memory } = require('./memory')
-const memory = Memory
+const memory = new Memory()
 
 class Array {
     constructor() {

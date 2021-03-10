@@ -1,0 +1,2 @@
+const { Array } = require('./array')
+
