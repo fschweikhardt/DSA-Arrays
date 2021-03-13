@@ -43,6 +43,38 @@ const URLify = string => {
         return newString.join('')
 }
 
-console.log(URLify('www.thinkful.com /tauh ida parv een'))
+console.log(URLify('I want a donut!'))
 
 '6. Filtering an array'
+
+const notFive = arr => {
+    let newArr = []
+    for (let i = 0; i < arr.length; i++) {
+        //if arr[i] < 5, i = ''
+        if (arr[i] <  5) { 
+            //do nothing 
+        } else {
+            newArr[newArr.length] = arr[i]
+        }
+    } return newArr
+}
+
+console.log(notFive([1,7,3,89,3,34,-23]))
+
+'7. Max sum in the array'
+
+let sumTest = [4, 6, -3, 5, -2, 1]
+
+const maxSum = arr => {
+    let newTotal = 0
+    for (let i = 0; i < arr.length; i++) { 
+        //update newtotal
+        //check if new number is greater than old total
+        if (newTotal < arr[i] + newTotal) {
+            //do nothing
+        }
+    }
+    return newTotal
+}   
+
+console.log(maxSum(sumTest))
