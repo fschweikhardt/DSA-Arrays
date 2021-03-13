@@ -78,3 +78,48 @@ const maxSum = arr => {
 }   
 
 console.log(maxSum(sumTest))
+
+
+'8. Merge arrays'
+
+const merge = (arr1, arr2) => {
+    let newArr = [...arr1, ...arr2]
+    newArr.sort((a, b) => a - b)
+    return newArr
+}
+let arrone = [1, 3, 6, 8, 11]
+let arrtwo = [2, 3, 5, 8, 9, 10]
+console.log('8. Merge arrays',merge(arrone, arrtwo))
+
+
+'9. Remove characters'
+
+let toRemove = "aeiou"
+let breakString = 'Battle of the Vowels: Hawaii vs. Grozny'
+
+const removeChar = (string, remove) => {
+    let newString = []
+    let removeArr = []
+    
+    for (let i = 0; i < remove.length; i++) {
+        removeArr[removeArr.length] = remove[i]
+    }
+    console.log('remove', ...removeArr)
+    
+    for (let j = 0; j < string.length; j++) {
+        for (let k = 0; k < removeArr.length; k++) {
+        }
+        if (string[j].includes([k])) {
+            console.log('if', string[j])
+            //do nothing
+            //newString[newString.length] = '!'
+        } else {
+            newString[newString.length] = string[j]
+            console.log('else', string[j])
+        }
+        console.log(newString)
+    }
+    return newString.toString()
+}
+//console.log(breakString, toRemove)
+console.log('9. Remove characters',removeChar(breakString, toRemove))
