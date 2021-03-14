@@ -131,20 +131,22 @@ let input = [
 
 const twoD = arr => {
     let output = []
-    for (let i = 0; i < arr.length; i++) {
+    let copy = [...arr]
+    for (let i = 0; i < copy.length; i++) {
        
-        for (let j = 0; j < arr[i].length; j++) {
+        for (let j = 0; j < copy[i].length; j++) {
             //console.log(arr[i][j])
-            if (arr[i][j] === 0) {
-                arr[i].map( x => x * 0)
-               // console.log('if - output[j]', output)
+            if (copy[i][j] === 0) {
+                console.log('if - output[j]', copy[i][j])
+                let newCopy = copy[i].map(x => x * 0)
+                output[i] = newCopy
 
             } else {
-                output[i] = arr[i]
-                //console.log('else - output[j]', output)
+                output[i] = copy[i]
+                console.log('else - output[j]', output)
             }
         } 
-        //console.log(arr[i])
+        //console.log(copy[i])
     } 
     console.log('output', output)
     return output
