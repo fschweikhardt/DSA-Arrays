@@ -117,3 +117,40 @@ const removeChar = (string, remove) => {
 }
 
 console.log('9. Remove characters',removeChar(breakString, toRemove))
+
+
+'11. 2D array'
+
+let input = [
+                [1,0,1,1,0],
+                [0,1,1,1,0],
+                [1,1,1,1,1],
+                [1,0,1,1,1],
+                [1,1,1,1,1]
+            ]
+
+const twoD = arr => {
+    let output = []
+    for (let i = 0; i < arr.length; i++) {
+       
+        for (let j = 0; j < arr[i].length; j++) {
+            //console.log(arr[i][j])
+            if (arr[i][j] === 0) {
+                arr[i].map( x => x * 0)
+               // console.log('if - output[j]', output)
+
+            } else {
+                output[i] = arr[i]
+                //console.log('else - output[j]', output)
+            }
+        } 
+        //console.log(arr[i])
+    } 
+    console.log('output', output)
+    return output
+}
+
+console.log('input', input)
+twoD(input)
+
+
