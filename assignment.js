@@ -98,28 +98,22 @@ let toRemove = "aeiou"
 let breakString = 'Battle of the Vowels: Hawaii vs. Grozny'
 
 const removeChar = (string, remove) => {
-    let newString = []
-    let removeArr = []
+    let newString = ''
     
-    for (let i = 0; i < remove.length; i++) {
-        removeArr[removeArr.length] = remove[i]
-    }
-    console.log('remove', ...removeArr)
+    for (let i = 0; i < string.length; i++) {
+        let search = true
+       
+        for (let j = 0; j < remove.length; j++) {
+           if (string[i] === remove[j]) {
+               search = false
+           }
+        }  
+
+        if (search) {
+            newString += string[i]
+        }
     
-    for (let j = 0; j < string.length; j++) {
-        for (let k = 0; k < removeArr.length; k++) {
-        }
-        if (string[j].includes([k])) {
-            console.log('if', string[j])
-            //do nothing
-            //newString[newString.length] = '!'
-        } else {
-            newString[newString.length] = string[j]
-            console.log('else', string[j])
-        }
-        console.log(newString)
-    }
-    return newString.toString()
+    } return newString
 }
-//console.log(breakString, toRemove)
+
 console.log('9. Remove characters',removeChar(breakString, toRemove))
