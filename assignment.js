@@ -152,8 +152,8 @@ const twoD = arr => {
     return output
 }
 
-console.log('input', input)
-twoD(input)
+// console.log('input', input)
+// twoD(input)
 
 
 '12. String rotation'
