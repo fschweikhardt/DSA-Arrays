@@ -5,6 +5,7 @@ class Array {
     
     constructor() {
         this.length = 0;
+        this._capacity = 0;
         this.ptr = memory.allocate(this.length);
     }
 
@@ -22,6 +23,7 @@ class Array {
         }
         memory.copy(this.ptr, oldPtr, this.length);
         memory.free(oldPtr);
+        this._capacity = size;
     }
     get(index) {
         if (index < 0 || index >= this.length) {

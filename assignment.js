@@ -1,30 +1,25 @@
 const Array = require('./array')
 
 function main() {
-
-    Array.SIZE_RATIO = 3;
-
     let arr = new Array();
 
-    // arr.push(3);
-
-    // arr.push(5);
-    // arr.push(15);
-    // arr.push(19);
-    // arr.push(45);
-    // arr.push(10);
+    arr.push(3);
+    arr.push(5);
+    arr.push(15);
+    arr.push(19);
+    arr.push(45);
+    arr.push(10);
 
     // arr.pop();
     // arr.pop();
     // arr.pop();
 
-    arr.push("tauhida");
-
-    //console.log(arr.get(0));
-    
+    //arr.push("tauhida");
+    //console.log(arr.get(0));  
+    console.log(arr)
 }
 
-main();
+console.log(main())
 
 '5. URLify a string'
 
@@ -43,7 +38,7 @@ const URLify = string => {
         return newString.join('')
 }
 
-console.log(URLify('I want a donut!'))
+//console.log(URLify('I want a donut!'))
 
 '6. Filtering an array'
 
@@ -59,7 +54,7 @@ const notFive = arr => {
     } return newArr
 }
 
-console.log(notFive([1,7,3,89,3,34,-23]))
+//console.log(notFive([1,7,3,89,3,34,-23]))
 
 '7. Max sum in the array'
 
@@ -77,7 +72,7 @@ const maxSum = arr => {
     return newTotal
 }   
 
-console.log(maxSum(sumTest))
+//console.log(maxSum(sumTest))
 
 
 '8. Merge arrays'
@@ -89,7 +84,7 @@ const merge = (arr1, arr2) => {
 }
 let arrone = [1, 3, 6, 8, 11]
 let arrtwo = [2, 3, 5, 8, 9, 10]
-console.log('8. Merge arrays',merge(arrone, arrtwo))
+//console.log('8. Merge arrays',merge(arrone, arrtwo))
 
 
 '9. Remove characters'
@@ -116,7 +111,7 @@ const removeChar = (string, remove) => {
     } return newString
 }
 
-console.log('9. Remove characters',removeChar(breakString, toRemove))
+//console.log('9. Remove characters',removeChar(breakString, toRemove))
 
 
 '11. 2D array'
