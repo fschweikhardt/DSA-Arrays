@@ -1,8 +1,8 @@
 const Array = require('./array')
 
 function main() {
-    let arr = new Array();
-
+    let arr = new Array()
+    Array.SIZE_RATIO = 3
     arr.push(3);
     arr.push(5);
     arr.push(15);
@@ -14,12 +14,12 @@ function main() {
     // arr.pop();
     // arr.pop();
 
-    //arr.push("tauhida");
-    //console.log(arr.get(0));  
+    // arr.push("tauhida");
+    // console.log(arr.get(2));  
     console.log(arr)
 }
 
-console.log(main())
+main()
 
 '5. URLify a string'
 
