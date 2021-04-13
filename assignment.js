@@ -19,7 +19,7 @@ function main() {
     console.log(arr)
 }
 
-main()
+//main()
 
 '5. URLify a string'
 
@@ -54,25 +54,66 @@ const notFive = arr => {
     } return newArr
 }
 
-//console.log(notFive([1,7,3,89,3,34,-23]))
+//console.log(notFive([1,7,3,89,3,34,-23,2,78]))
 
 '7. Max sum in the array'
 
 let sumTest = [4, 6, -3, 5, -2, 1]
 
 const maxSum = arr => {
-    let newTotal = 0
+    let highestNum = 0
+    let runningTotal = 0
     for (let i = 0; i < arr.length; i++) { 
-        //update newtotal
-        //check if new number is greater than old total
-        if (newTotal < arr[i] + newTotal) {
-            //do nothing
+        runningTotal += arr[i]
+        if (runningTotal > highestNum) {
+            highestNum = runningTotal
         }
     }
-    return newTotal
+    return highestNum
 }   
 
-//console.log(maxSum(sumTest))
+console.log('loop', maxSum(sumTest))
+
+const maxSumForOf = arr => {
+    let highestNum = 0
+    for (let runningTotal of arr) {
+        runningTotal += runningTotal
+            if (runningTotal > highestNum) {
+                highestNum = runningTotal
+            }
+    }
+    return highestNum
+}
+
+console.log('forOf', maxSumForOf(sumTest))
+
+const maxSumForEach = arr => {
+    let highestNum = 0
+    let runningTotal = 0
+    arr.forEach(num => {
+        runningTotal += num
+            if (runningTotal > highestNum) {
+                highestNum = runningTotal
+            }
+    }) 
+    return highestNum
+}   
+
+console.log('forEach', maxSumForEach(sumTest))
+
+const maxSumMap = arr => {
+    let highestNum = 0
+    let runningTotal = 0
+    arr.map(num => {
+        runningTotal += num
+            if (runningTotal > highestNum) {
+                highestNum = runningTotal
+            }
+    }) 
+    return highestNum
+}   
+
+console.log('map', maxSumMap(sumTest))
 
 
 '8. Merge arrays'
