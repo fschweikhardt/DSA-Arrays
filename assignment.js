@@ -118,41 +118,47 @@ const maxSumMap = arr => {
 
 '8. Merge arrays'
 
+let arrone = [1, 3, 6, 8, 11]
+let arrtwo = [2, 3, 5, 8, 9, 10]
+let arrthree = ['A', 'C', 'E']
+let arrfour = ['B', 'D', 'F']
+
 const merge = (arr1, arr2) => {
     let newArr = [...arr1, ...arr2]
     newArr.sort((a, b) => a - b)
     return newArr
 }
-let arrone = [1, 3, 6, 8, 11]
-let arrtwo = [2, 3, 5, 8, 9, 10]
-//console.log('8. Merge arrays',merge(arrone, arrtwo))
+
+//console.log('8. Merge arrays', merge(arrone, arrtwo))
 
 
 '9. Remove characters'
 
 let toRemove = "aeiou"
 let breakString = 'Battle of the Vowels: Hawaii vs. Grozny'
+//let easy = "Tina"
 
 const removeChar = (string, remove) => {
-    let newString = ''
+    let newArr = []
     
     for (let i = 0; i < string.length; i++) {
         let search = true
        
         for (let j = 0; j < remove.length; j++) {
-           if (string[i] === remove[j]) {
-               search = false
-           }
-        }  
-
+            if (string[i] === remove[j]) {
+                search = false
+            }
+        } 
         if (search) {
-            newString += string[i]
+            newArr[i] = string [i]
         }
-    
-    } return newString
+    } 
+    return newArr.join('')
 }
 
 //console.log('9. Remove characters',removeChar(breakString, toRemove))
+
+'10. Producucts'
 
 
 '11. 2D array'
@@ -165,31 +171,35 @@ let input = [
                 [1,1,1,1,1]
             ]
 
+// const twoD = arr => {
+//     let output = []
+//     let copy = [...arr]
+//     for (let i = 0; i < copy.length; i++) {
+       
+//         for (let j = 0; j < copy[i].length; j++) {
+//             //console.log(arr[i][j])
+//             if (copy[i][j] === 0) {
+//                 console.log('if - output[j]', copy[i][j])
+//                 let newCopy = copy[i].map(x => x * 0)
+//                 output[i] = newCopy
+
+//             } else {
+//                 output[i] = copy[i]
+//                 console.log('else - output[j]', output)
+//             }
+//         } 
+//         //console.log(copy[i])
+//     } 
+//     console.log('output', output)
+//     return output
+// }
+
 const twoD = arr => {
     let output = []
-    let copy = [...arr]
-    for (let i = 0; i < copy.length; i++) {
-       
-        for (let j = 0; j < copy[i].length; j++) {
-            //console.log(arr[i][j])
-            if (copy[i][j] === 0) {
-                console.log('if - output[j]', copy[i][j])
-                let newCopy = copy[i].map(x => x * 0)
-                output[i] = newCopy
-
-            } else {
-                output[i] = copy[i]
-                console.log('else - output[j]', output)
-            }
-        } 
-        //console.log(copy[i])
-    } 
-    console.log('output', output)
-    return output
+    //if arr[i][j] has a zero, the row and column is zero
 }
 
-// console.log('input', input)
-// twoD(input)
+console.log(twoD(input))
 
 
 '12. String rotation'
