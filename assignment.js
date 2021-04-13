@@ -72,7 +72,7 @@ const maxSum = arr => {
     return highestNum
 }   
 
-console.log('loop', maxSum(sumTest))
+//console.log('loop', maxSum(sumTest))
 
 const maxSumForOf = arr => {
     let highestNum = 0
@@ -85,7 +85,7 @@ const maxSumForOf = arr => {
     return highestNum
 }
 
-console.log('forOf', maxSumForOf(sumTest))
+//console.log('forOf', maxSumForOf(sumTest))
 
 const maxSumForEach = arr => {
     let highestNum = 0
@@ -99,7 +99,7 @@ const maxSumForEach = arr => {
     return highestNum
 }   
 
-console.log('forEach', maxSumForEach(sumTest))
+//console.log('forEach', maxSumForEach(sumTest))
 
 const maxSumMap = arr => {
     let highestNum = 0
@@ -113,7 +113,7 @@ const maxSumMap = arr => {
     return highestNum
 }   
 
-console.log('map', maxSumMap(sumTest))
+//console.log('map', maxSumMap(sumTest))
 
 
 '8. Merge arrays'
