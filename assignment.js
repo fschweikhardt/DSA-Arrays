@@ -196,9 +196,34 @@ let input = [
 
 const twoD = arr => {
     let output = []
+    let row = []
+    let column = []
     //if arr[i][j] has a zero, the row and column is zero
+    //---> first, row
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (arr[i][j] === 0) {
+                row[i] = true
+                column[j] = true
+            }
+        }
+    }
+    for (let i = 0; i < arr.length; i++) {
+        if(!output[i]) {
+          output[i] = []
+        }
+        for (let j=0; j<arr[0].length;j++){
+            if (row[i] || column[j]) {
+                output[i][j] = 0
+            } else {
+                output[i][j] = 1
+            }
+        }
+    }
+    return output 
 }
 
+//O(n^2)
 console.log(twoD(input))
 
 
