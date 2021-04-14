@@ -263,9 +263,6 @@ let string2 = 'bananna'
 let string3 = 'nozama'
 
 function checker(one, two) {
-    //loop through a string down to zero
-    //if the index doesn't match
-    //return false
     let output = false
     let flipOne = one.split('').reverse().join('')
 
@@ -275,8 +272,8 @@ function checker(one, two) {
     if (flipOne === two) { 
         output = true
     }
-    
+
     return output
 }
 
-console.log(checker(string1, string2))
+console.log(checker(string1, string3))
