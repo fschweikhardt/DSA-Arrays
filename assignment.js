@@ -253,8 +253,30 @@ let array = [[1,0,1,1,0],
     [1,0,1,1,1],
     [1,1,1,1,1]]
 
-console.log(array2D(array))
+//console.log(array2D(array))
 
 
 '12. String rotation'
 
+let string1 = 'amazon'
+let string2 = 'bananna'
+let string3 = 'nozama'
+
+function checker(one, two) {
+    //loop through a string down to zero
+    //if the index doesn't match
+    //return false
+    let output = false
+    let flipOne = one.split('').reverse().join('')
+
+    console.log(flipOne)
+    console.log(two)
+
+    if (flipOne === two) { 
+        output = true
+    }
+    
+    return output
+}
+
+console.log(checker(string1, string2))
