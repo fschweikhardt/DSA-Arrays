@@ -201,18 +201,24 @@ const twoD = arr => {
     //if arr[i][j] has a zero, the row and column is zero
     //---> first, row
     for (let i = 0; i < arr.length; i++) {
+       // console.log('A - row')
         for (let j = 0; j < arr[i].length; j++) {
+            // console.log('B - column')
             if (arr[i][j] === 0) {
                 row[i] = true
                 column[j] = true
+                // console.log('row', row)
+                // console.log('column', column)
             }
         }
     }
     for (let i = 0; i < arr.length; i++) {
-        if(!output[i]) {
-          output[i] = []
+        // console.log('C - row')
+        if (!output[i]) {
+            output[i] = []
         }
-        for (let j=0; j<arr[0].length;j++){
+        for (let j = 0; j < arr[0].length; j++) {
+            // console.log('D - column')
             if (row[i] || column[j]) {
                 output[i][j] = 0
             } else {
@@ -224,7 +230,30 @@ const twoD = arr => {
 }
 
 //O(n^2)
-console.log(twoD(input))
+//console.log(twoD(input))
+
+function array2D(arr) {
+    const originalArr = JSON.parse(JSON.stringify(arr))
+    let newArr = arr
+
+    originalArr.map((row, rowI) => {
+        row.map((item, arrI) => {
+            if (item === 0) {
+                newArr[rowI].forEach((num, i) => newArr[rowI][i] = 0)
+                newArr.forEach(newRow => newRow[arrI] = 0)
+            }
+        })
+    })
+    return newArr
+}
+
+let array = [[1,0,1,1,0],
+    [0,1,1,1,0],
+    [1,1,1,1,1],
+    [1,0,1,1,1],
+    [1,1,1,1,1]]
+
+console.log(array2D(array))
 
 
 '12. String rotation'
