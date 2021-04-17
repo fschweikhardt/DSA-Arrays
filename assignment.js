@@ -14,12 +14,12 @@ function main() {
     // arr.pop();
     // arr.pop();
 
-    // arr.push("tauhida");
+    //arr.push("tauhida");
     // console.log(arr.get(2));  
     console.log(arr)
 }
 
-//main()
+main()
 
 '5. URLify a string'
 
@@ -159,6 +159,22 @@ const removeChar = (string, remove) => {
 //console.log('9. Remove characters',removeChar(breakString, toRemove))
 
 '10. Producucts'
+function products(arr) {
+	let ret = [];
+	for (let i = 0; i < arr.length; i++) {
+		let prod = 1;
+		for (let j = 0; j < arr.length; j++) {
+			if (i != j) {
+                prod *= arr[j];
+            }
+		}
+		ret.push(prod);
+	}
+	return ret;
+}
+
+let productsArr = [1, 3, 9, 4]
+console.log(products(productsArr))
 
 
 '11. 2D array'
@@ -276,4 +292,4 @@ function checker(one, two) {
     return output
 }
 
-console.log(checker(string1, string3))
+//console.log(checker(string1, string3))
